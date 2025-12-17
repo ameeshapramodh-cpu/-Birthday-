@@ -18,52 +18,49 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 <style>
-    /* 1. Font එක Import කරමු */
+    /* 1. Estonia Font එක ලෝඩ් කරගන්නවා */
     @import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
 
-    /* 2. මුළු Card එකේම Layout එක ලස්සන කරමු */
-    .boxMail-container {
-        display: flex;
-        flex-direction: column; /* Phone එකේදී එක යට එක ලස්සනට පේන්න */
-        align-items: center;
-        padding: 15px;
-    }
-
-    /* 3. Birthday Wish එක තියෙන තැන (Card 2) */
+    /* 2. අකුරු වල style එක විතරක් වෙනස් කරනවා */
     .boxMail .card2 .card2-content h2 {
         font-family: 'Estonia', cursive !important;
-        font-size: 28px !important; /* Phone එකට ගැලපෙන සයිස් එක */
-        line-height: 1.2 !important; /* අකුරු පේළි ළඟ නිසා කියවන්න ලේසියි */
-        color: #2c3e50; /* තද පාටක් */
-        text-align: center;
-        font-weight: 500 !important;
-        margin-top: 10px;
-        word-spacing: 2px; /* වචන අතර පරතරය */
-        padding: 0 10px;
+        font-size: 26px !important;
+        line-height: 1.3 !important;
+        color: #333 !important;
+        text-align: center !important;
+        font-weight: 400 !important;
+        text-transform: none !important;
+        margin: 10px 0 !important;
+        display: block !important; /* අකුරු අතුරුදහන් වීම වැලැක්වීමට */
     }
 
-    /* 4. මාතෘකාව (To You) */
     .boxMail .card2 .card2-content h3 {
         font-family: 'Estonia', cursive !important;
-        font-size: 38px !important;
-        color: #e84393; /* ලස්සන Pink පාටක් */
-        margin-bottom: 5px;
-        text-align: center;
+        font-size: 35px !important;
+        color: #e84393 !important;
+        text-align: center !important;
     }
 
-    /* 5. Phone එකේදී Card එක පිට පනින එක නවත්තන්න */
+    /* 3. Mobile එකේදී card එකේ සයිස් එක හදනවා (Card එක open නොවී තියෙන එකට විසඳුම) */
     @media screen and (max-width: 600px) {
-        .boxMail {
-            width: 90% !important; /* Phone එකේදී screen එකට ගානට හිටිනවා */
-            left: 5% !important;
-            top: 5% !important;
+        .boxMail.active {
+            display: flex !important; /* Card එක open වුණාම පෙනෙන්න */
+            width: 95% !important;
+            left: 2.5% !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
             height: auto !important;
-            max-height: 90vh;
-            overflow-y: auto; /* අකුරු වැඩි නම් scroll කරන්න පුළුවන් */
+            max-height: 85vh;
+            overflow-y: auto;
+            z-index: 1000;
         }
-        
+
+        .boxMail-container {
+            flex-direction: column !important;
+        }
+
         .boxMail .card2 .card2-content h2 {
-            font-size: 24px !important; /* පොඩි phone වලට තවත් පොඩ්ඩක් අඩු කළා */
+            font-size: 22px !important;
         }
     }
 </style>
