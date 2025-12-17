@@ -18,48 +18,61 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 <style>
-    /* 1. Estonia Font එක ලෝඩ් කරගන්නවා */
+    /* 1. Font එක Import කිරීම */
     @import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
 
-    /* 2. අකුරු වල style එක විතරක් වෙනස් කරනවා */
+    /* 2. මුළු අකුරු පද්ධතියම ලස්සන කිරීම */
     .boxMail .card2 .card2-content h2 {
         font-family: 'Estonia', cursive !important;
-        font-size: 32px !important;
-        line-height: 1.1 !important;
+        font-size: 32px !important; /* ඔයා දාපු සයිස් එක */
+        line-height: 0.9 !important; /* පේළි අතර පරතරය අඩු කළා */
         color: #ffffff !important;
         text-align: center !important;
-        font-weight: 400 !important;
         text-transform: none !important;
-        margin: 10px 0 !important;
-        display: block !important; /* අකුරු අතුරුදහන් වීම වැලැක්වීමට */
+        margin: 5px 0 !important;
+        display: block !important;
+        /* අකුරු තදට (Bold) පේන්න shadow එකක් පාවිච්චි කළා */
+        text-shadow: 0.5px 0.5px 0px #fff, -0.5px -0.5px 0px #fff, 0.5px 0.5px 2px rgba(0,0,0,0.2) !important;
+        font-weight: normal !important; 
     }
 
     .boxMail .card2 .card2-content h3 {
         font-family: 'Estonia', cursive !important;
-        font-size: 35px !important;
+        font-size: 38px !important;
         color: #ffffff !important;
         text-align: center !important;
+        margin-bottom: 5px !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2) !important;
+    }
 
-        }
+    /* 3. Emoji වල Style එක */
+    .my-emoji {
+        font-size: 16px !important; /* Emoji තවත් පොඩ්ඩක් පොඩි කළා පේළියට ගැලපෙන්න */
+        font-family: sans-serif !important; 
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 2px;
+        line-height: 1;
+        text-shadow: none !important; /* Emoji වලට අකුරු වල shadow එක එපා */
+    }
 
-        .boxMail-container {
-            flex-direction: column !important;
-        }
+    /* 4. Layout එක පිළිවෙල කිරීම */
+    .boxMail-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0px !important; /* පේළි අතර අනවශ්‍ය දුර නැති කිරීමට */
+    }
 
+    /* Mobile එකට විශේෂ වෙනස්කම් */
+    @media screen and (max-width: 600px) {
         .boxMail .card2 .card2-content h2 {
-            font-size: 29px !important;
+            font-size: 28px !important; /* Phone එකට ගැළපෙන සයිස් එක */
+            line-height: 0.85 !important; /* Phone එකේදී පරතරය තවත් අඩු කළා */
         }
-/* Emoji වල සයිස් එක අකුරු වලට වඩා පොඩි කිරීමට */
-.my-emoji {
-    font-size: 18px !important; /* මේකෙන් තමයි emoji වල ලොකු පොඩි බව හදන්නේ */
-    font-family: sans-serif !important; 
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 3px;
-    line-height: 1;
-}
-
-    
+        
+        .boxMail .card2 .card2-content h3 {
+            font-size: 35px !important;
+        }
     }
 </style>
     
