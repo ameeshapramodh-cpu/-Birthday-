@@ -18,26 +18,53 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 <style>
-    /* 1. Google වලින් Estonia Font එක ලෝඩ් කරගන්නවා */
+    /* 1. Font එක Import කරමු */
     @import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
 
-    /* 2. Birthday Wish එකට Style එක දානවා */
-    .boxMail .card2 .card2-content h2 {
-        font-family: 'Estonia', cursive !important; /* මෙන්න ඔයා ඉල්ලපු Font එක */
-        font-size: 35px !important; /* මේ ෆොන්ට් එක හීනි නිසා සයිස් එක 26px වගේ ලොකු කළා */
-        line-height: 1.2 !important; /* පේළි අතර පරතරය */
-        color: #ffffff; /* තද කළු පාට දැම්මා පැහැදිලිව පේන්න */
-        font-weight: 400 !important;
-        text-transform: none !important;
-        text-align: center; /* මේ වගේ ෆොන්ට් එකක් මැදට (Center) තිබ්බම ලස්සනයි */
-        padding: 5px;
+    /* 2. මුළු Card එකේම Layout එක ලස්සන කරමු */
+    .boxMail-container {
+        display: flex;
+        flex-direction: column; /* Phone එකේදී එක යට එක ලස්සනට පේන්න */
+        align-items: center;
+        padding: 15px;
     }
 
-    /* 3. උඩ මාතෘකාව (To You) */
+    /* 3. Birthday Wish එක තියෙන තැන (Card 2) */
+    .boxMail .card2 .card2-content h2 {
+        font-family: 'Estonia', cursive !important;
+        font-size: 28px !important; /* Phone එකට ගැලපෙන සයිස් එක */
+        line-height: 1.2 !important; /* අකුරු පේළි ළඟ නිසා කියවන්න ලේසියි */
+        color: #2c3e50; /* තද පාටක් */
+        text-align: center;
+        font-weight: 500 !important;
+        margin-top: 10px;
+        word-spacing: 2px; /* වචන අතර පරතරය */
+        padding: 0 10px;
+    }
+
+    /* 4. මාතෘකාව (To You) */
     .boxMail .card2 .card2-content h3 {
         font-family: 'Estonia', cursive !important;
-        font-size: 40px !important; /* Title එක තව ලොකු කළා */
-        font-weight: 400;
+        font-size: 38px !important;
+        color: #e84393; /* ලස්සන Pink පාටක් */
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    /* 5. Phone එකේදී Card එක පිට පනින එක නවත්තන්න */
+    @media screen and (max-width: 600px) {
+        .boxMail {
+            width: 90% !important; /* Phone එකේදී screen එකට ගානට හිටිනවා */
+            left: 5% !important;
+            top: 5% !important;
+            height: auto !important;
+            max-height: 90vh;
+            overflow-y: auto; /* අකුරු වැඩි නම් scroll කරන්න පුළුවන් */
+        }
+        
+        .boxMail .card2 .card2-content h2 {
+            font-size: 24px !important; /* පොඩි phone වලට තවත් පොඩ්ඩක් අඩු කළා */
+        }
     }
 </style>
     
